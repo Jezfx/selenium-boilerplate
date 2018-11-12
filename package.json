@@ -1,0 +1,26 @@
+{
+  "name": "selenium-user-journey-example",
+  "version": "1.0.0",
+  "description": "Full Selenium journey testing example",
+  "main": "config.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha ./__tests__/**/*.ui.js --timeout=60000",
+    "test-watch": "node node_modules/mocha/bin/mocha ./__tests__/**/*.ui.js --watch --recursive --timeout=60000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jezfx/selenium-user-journey-example.git"
+  },
+  "author": "jez williams jez@jezfx.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jezfx/selenium-user-journey-example/issues"
+  },
+  "homepage": "https://github.com/Jezfx/selenium-user-journey-example#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}

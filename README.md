@@ -29,7 +29,7 @@ describe("Homepage", () => {
 ### File naming convention
 The naming convention of suffixing test files with `.ui` was using to 1) seperate the tests when running mocha 2) meant we could have .js files in the repo without them being ran by the testing library.
 
-`"ui-test": "node node_modules/mocha/bin/mocha ./__test__/**/*.ui.js --timeout=60000"` (the full path to mocha is used for support for windows)
+`"ui-test": "node node_modules/mocha/bin/mocha ./__tests__/**/*.ui.js --timeout=60000"` (the full path to mocha is used for support for windows)
 
 ### Page Object Model
 This pattern allows us to contain any methods (e.g login, clickSearch) or locators inside a class which we can share between tests and keep seperate from the testing logic.
@@ -42,6 +42,12 @@ This pattern allows us to contain any methods (e.g login, clickSearch) or locato
 - how to set up browser stack
 - where to enter the  credentials (might make this a cong thing)
 
+
+## Getting started
+
+### Prerequisite
+- [Web Drivers](https://www.npmjs.com/package/selenium-webdriver) for each browser you want to install
+-
 
 Gotchas
 The flags are mac only, process.env works differently on windows so to get those to work you need to add this script file.

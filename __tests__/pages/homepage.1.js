@@ -1,7 +1,6 @@
 const { By, until } = require("selenium-webdriver");
-const utils = require("../utils");
 
-const url = "http://qa.ii.co.uk";
+const url = "http://google.com";
 
 class HeaderComponent {
 
@@ -30,11 +29,6 @@ class HeaderComponent {
     await this.driver.wait(until.elementIsVisible(
       this.driver.findElement(this.locators.searchModal)
     ));
-  }
-
-  async openLoginModal(driver) {
-    await driver.findElement(this.locators.loginButton).click();
-    await utils.wait(500);
   }
 }
 

@@ -1,9 +1,6 @@
 const { By, until } = require("selenium-webdriver");
-const utils = require("../utils");
 
-const url = "http://qa.ii.co.uk";
-
-class HeaderComponent {
+class LoginModalComponent {
 
   constructor(driver) {
     this.driver = driver;
@@ -18,24 +15,15 @@ class HeaderComponent {
     }
   }
 
-  open() {
-    this.driver.get(url);
-  }
-
-  clickSearch() {
-    this.driver.findElement(this.locators.searchButton).click();
-  }
-
   async searchModalVisible() {
     await this.driver.wait(until.elementIsVisible(
       this.driver.findElement(this.locators.searchModal)
     ));
   }
 
-  async openLoginModal(driver) {
-    await driver.findElement(this.locators.loginButton).click();
-    await utils.wait(500);
+  async openModal() {
+    
   }
 }
 
-module.exports = HeaderComponent;
+module.exports = LoginModalComponent;
