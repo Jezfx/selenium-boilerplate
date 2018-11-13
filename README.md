@@ -36,6 +36,7 @@ This pattern allows us to contain any methods (e.g login, clickSearch) or locato
 
 ## Utilites
 - *wait* to pause the test and wait for any animations or things to load before carring on.
+- **waitFind** uses the until function from selenium-webdriver to wait until it finds the element. You just need to provide it with the current driver (`this.driver` if you're in a class and `driver` if you're in the test) and the element you're looking for.
 - *switchTab* use this util function when you need to run the test on a new tab that's opened
 
 
