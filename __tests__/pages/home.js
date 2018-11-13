@@ -9,6 +9,7 @@ class HomePage {
     this.locators = {
       header: By.css("#gb"),
       buttonLogin: By.css("#gb_70"),
+      accountInformation: By.xpath("//div[contains(text(), 'This account is managed by')]")
     }
   }
 

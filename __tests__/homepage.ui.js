@@ -5,9 +5,10 @@ const { expect } = chai;
 
 const Home = require("./pages/home");
 const Login = require("./pages/login");
-// const Account = require("./pages/account");
 
 const config = require("../_config");
+const utils = require("../_utils");
+
 const driverSetup = config.browser(process);
 
 describe("Home Page", () => {
@@ -18,7 +19,6 @@ describe("Home Page", () => {
 
     home = new Home(driver);
     login = new Login(driver);
-    //   account = new Account(driver);
 
     await home.open();
   });
@@ -36,7 +36,8 @@ describe("Home Page", () => {
     it("should be able to log in", async () => {
       await home.clickLogin();
       await login.login();
-      // const accountText = await driver.findElement(account.locators.header).getText();
+      const loggedInText = await utils.waitFind(driver, home.locators.accountInformation);
+      expect(loggedInText).to.be.a("object");
     });
   });
 });
