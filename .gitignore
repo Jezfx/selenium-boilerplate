@@ -5,6 +5,7 @@ googleCredentials.js
 .cache
 node_modules
 yarn-error.log
+npm-debug.log
 .env.development
 .env
 
