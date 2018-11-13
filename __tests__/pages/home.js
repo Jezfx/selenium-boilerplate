@@ -1,5 +1,4 @@
-const { By, until } = require("selenium-webdriver");
-const utils = require("../utils");
+const { By } = require("selenium-webdriver");
 
 const url = "http://google.com?hl=en-GB";
 
