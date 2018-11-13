@@ -33,7 +33,7 @@ class LoginPage {
     // shouldn't have to do this wait but it seems to find the element
     // before WebDriver can interact with it so putting in a
     // wait to give it time to load
-    await utils.wait(4000);
+    await utils.wait(2000);
 
     await utils
       .waitFind(this.driver, this.locators.inputPassword)

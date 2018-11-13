@@ -23,9 +23,9 @@ describe("Home Page", () => {
     await home.open();
   });
 
-  // afterEach(async () => {
-  //   driver.quit();
-  // });
+  afterEach(async () => {
+    driver.quit();
+  });
 
   describe("Header", () => {
     it("should exist", async () => {

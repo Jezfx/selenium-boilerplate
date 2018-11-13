@@ -24,11 +24,11 @@ describe("Login Page", () => {
       await login.open();
     });
 
-    // afterEach(async () => {
-    //   driver.quit();
-    // });
+    afterEach(async () => {
+      driver.quit();
+    });
 
-    describe("Login", () => {
+    describe("Centre Box", () => {
 
         // Demo to test things that open on a new tab
         it("should open the privacy page", async () => {
