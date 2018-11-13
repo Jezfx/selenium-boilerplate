@@ -1,2 +1,13 @@
 node_modules
 googleCredentials.js
+
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+.env.development
+.env
+
+# Build directory
+/public
+.DS_Store
