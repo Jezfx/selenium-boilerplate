@@ -1,3 +1,7 @@
+# Selenium NodeJS boilerplate with Browserstack
+
+![gif](http://www.jezfx.com/github-images/testing.gif)
+
 # Getting started
 
 Feel free to remove the demo tests and pages that I've included as an example and simply use this as a boilerplate to create your own. However, the tests I've included cover some simple functionality which you can use as reference to get going with pretty quickly. 
