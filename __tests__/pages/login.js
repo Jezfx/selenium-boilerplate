@@ -28,7 +28,7 @@ class LoginPage {
 
     utils.wait(2000); // wait for the animation
 
-    await this.driver.findElement(this.locators.buttonNext).click();
+    await utils.waitFind(this.driver, this.locators.buttonNext).click();
 
     // shouldn't have to do this wait but it seems to find the element
     // before WebDriver can interact with it so putting in a
@@ -38,11 +38,11 @@ class LoginPage {
     await utils
       .waitFind(this.driver, this.locators.inputPassword)
       .sendKeys(process.env.GOOGLE_PASSWORD);
-    await this.driver.findElement(this.locators.buttonNext).click();
+    await utils.waitFind(this.driver, this.locators.buttonNext).click();
   }
 
   async openPrivacyPage() {
-    await this.driver.findElement(this.locators.linkPrivacy).click();
+    await utils.waitFind(this.driver, this.locators.linkPrivacy).click();
     await utils.wait(2000);
     await utils.switchTab(this.driver);
   }

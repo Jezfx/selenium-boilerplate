@@ -29,7 +29,7 @@ describe("Home Page", () => {
 
   describe("Header", () => {
     it("should exist", async () => {
-      const header = await driver.findElement(home.locators.header);
+      const header = await utils.waitFind(driver, home.locators.header);
       expect(header).to.be.a("object");
     });
 
