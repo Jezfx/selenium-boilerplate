@@ -25,7 +25,7 @@ BROWSERSTACK_USERNAME=username
 BROWSERSTACK_AUTOMATE_KEY=key
 ```
 
-This is optional, and if you choose not to use it just replace the where I've used the variables with your own and remove require("dotenv).config(); anywhere.
+This is optional, and if you choose not to use it just replace the where I've used the variables with your own and remove `require("dotenv).config();` anywhere.
 Prerequisites
 Web Driver for Chrome
 node 8 or above run nvm use will use `10.9.0`
@@ -39,7 +39,7 @@ In the root directory run: 
 - `npm run test`
 
 ## Additional Web drivers
-To add additional browsers you'll need to add them to the browsers object in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: npm run test -- --opera
+To add additional browsers you'll need to add them to the browsers object in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: `npm run test -- --opera`
 
 ## Browserstack
 To run automate the tests with browserstack ensure you have an account and have filled in your credentials in the `.env` file. Then just add the Browerstack flag to the npm script to run. That should sent the tests to your Browserstack dashboard and generate the relevant videos and logs.
