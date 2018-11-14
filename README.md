@@ -2,7 +2,7 @@
 
 [Imgur](http://jezfx.com/github-images/ezgif.com-resize.gif)
 
-<img src="https://i.imgur.com/z0lz3Bb.gifv" width="900" />
+<img src="https://imgur.com/download/z0lz3Bb" width="900" />
 
 
 
