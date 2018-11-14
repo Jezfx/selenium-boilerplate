@@ -26,14 +26,14 @@ BROWSERSTACK_AUTOMATE_KEY=key
 ```
 
 This is optional, and if you choose not to use it just replace the where I've used the variables with your own and remove `require("dotenv).config();` anywhere.
-Prerequisites
-Web Driver for Chrome
-node 8 or above run nvm use will use `10.9.0`
+
+## Prerequisites
+- Web Driver for Chrome
+- Node 8 or above run nvm use will use the latest stable version
 
 ## To Run
 
 In the root directory run: 
-
 
 - `npm install`
 - `npm run test`
