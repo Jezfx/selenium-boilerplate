@@ -1,6 +1,6 @@
 # Selenium NodeJS boilerplate with Browserstack
 
-[Imgur](//jezfx.com/github-images/ezgif.com-resize.gif)
+[Imgur](http://jezfx.com/github-images/ezgif.com-resize.gif)
 
 
 # Getting started
