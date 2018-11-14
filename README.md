@@ -1,6 +1,7 @@
 # Selenium NodeJS boilerplate with Browserstack
 
-![gif](http://www.jezfx.com/github-images/testing.gif)
+![gif](https://imgur.com/download/eaWXwOI)
+
 
 # Getting started
 
@@ -29,10 +30,22 @@ Prerequisites
 Web Driver for Chrome
 node 8 or above run nvm use will use `10.9.0`
 
-To Run
-In the root directory run: 
-npm install
-npm run test
+## To Run
 
-Additional Web drivers
+In the root directory run: 
+
+
+- `npm install`
+- `npm run test`
+
+## Additional Web drivers
 To add additional browsers you'll need to add them to the browsers object in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: npm run test -- --opera
+
+## Browserstack
+To run automate the tests with browserstack ensure you have an account and have filled in your credentials in the `.env` file. Then just add the Browerstack flag to the npm script to run. That should sent the tests to your Browserstack dashboard and generate the relevant videos and logs.
+
+![gif](https://imgur.com/download/nx7wwb2)
+
+Above is an example of the Google login test as you can see the Google log in doesn't actually complete due to authentication checks however, this isn't an issue with the tests or browserstack and shouldn't be a problem unless you're logging into Google.
+
+To add other browsers, devices or oporating system to Browserstack just update the `capabilities` variable in the `config.js` with any others you'd want to include ([useful generator](https://www.browserstack.com/automate/capabilities)).
