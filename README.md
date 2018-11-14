@@ -44,7 +44,7 @@ To add additional browsers you'll need to add them to the browsers object in the
 ## Browserstack
 To run automate the tests with browserstack ensure you have an account and have filled in your credentials in the `.env` file. Then just add the Browerstack flag to the npm script to run. That should sent the tests to your Browserstack dashboard and generate the relevant videos and logs.
 
-<img src="https://imgur.com/download/nx7wwb2" />
+<img src="https://imgur.com/download/WY3cBRu" />
 
 Above is an example of the Google login test as you can see the Google log in doesn't actually complete due to authentication checks however, this isn't an issue with the tests or browserstack and shouldn't be a problem unless you're logging into Google.
 
