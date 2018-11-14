@@ -1,6 +1,6 @@
 # Selenium NodeJS boilerplate with Browserstack
 
-[Imgur](https://i.imgur.com/eaWXwOI.gifv)
+[Imgur](https://i.imgur.com/z0lz3Bb.gifv)
 
 
 # Getting started
