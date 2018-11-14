@@ -1,12 +1,15 @@
 const selenium = require("selenium-webdriver");
+require("dotenv").config();
 
 var capabilities = {
-  browserName: "iPhone",
-  device: "iPhone 7",
-  realMobile: "true",
-  os_version: "10.3",
-  "browserstack.user": "",
-  "browserstack.key": ""
+  browserName: "Chrome",
+  browser_version: '71.0 beta',
+  os: "OS X",
+  os_version: "Mojave",
+  "browserstack.local" : 'false',
+  'browserstack.selenium_version' : '3.6.0',
+  "browserstack.user": process.env.BROWSERSTACK_USERNAME,
+  "browserstack.key": process.env.BROWSERSTACK_AUTOMATE_KEY
 };
 
 const browsers = {
