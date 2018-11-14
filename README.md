@@ -2,7 +2,8 @@
 
 [Imgur](http://jezfx.com/github-images/ezgif.com-resize.gif)
 
-<img src="http://jezfx.com/github-images/ezgif.com-resize.gif" width="40" height="40" />
+<img src="https://i.imgur.com/z0lz3Bb.gifv" width="900" />
+
 
 
 # Getting started
