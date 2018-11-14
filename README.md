@@ -1,57 +1,34 @@
-# Selenium journey testing example
+# Getting started
 
-### Intro
-I'm aware that with the upcomming support of Cypress.io the life span of this probably isn't long and if you have the option to use it over Selenium I would. Currently (as of writing this) Cypress.io has only just come out of beta and only has support for Chrome. So, if like me, you need your user journey (or, end-to-end) tests to support other browsers or automated intergration with Browserstack then this might Selenium might still be the best option.
+Feel free to remove the demo tests and pages that I've included as an example and simply use this as a boilerplate to create your own. However, the tests I've included cover some simple functionality which you can use as reference to get going with pretty quickly. 
+These tests are against google.com and cover the; 
 
-This was my first time using Selenium and decided to put up this repo after spending hours of trying to find good examples and finding the documenation outdataed and confusing to understand.
+**1) Home page**
 
-This repo is how I organised our user journey tests with my last client. I've changed the tested site to google.com and re-removed 80% of the tests to only show the main functionality. You'll need to change the browserstack credientials to get the automated uploads to work. This is by no means the best way to do user journey tests but just an example (as therer wasn't many good ones I could find) of how we did it, feel free to take or leave any parts of it, enjoy ✌️.
+The first tests  checks to see if the header div exists, which is a common type of test to check if the correct elements have loaded. Another test will go through the log in process. 
 
-## Approach
+**2) Login page**
 
-### Journeys
-Each page has its own file from where the tests start from. Each test should have a limited focus. So, for example when testing the login function from the homepage you'd only check its made it to the loging page, and not test the journey any further.
+This test check the privacy link on the login page as it opens a new tab and makes use of the switchTab utility function. 
 
-`homepage.ui.js`
-
-```js
-describe("Homepage", () => {
-
-    describe("Header", () => {
-        it("should login", () => {
-            /// ...
-            expect(header).to.equal("logged in")
-        })
-    })
-})
+## Set up
+I've used an `.env` file to store any credentials. 
+```
+GOOGLE_EMAIL=email
+GOOGLE_PASSWORD=password
+BROWSERSTACK_USERNAME=username
+BROWSERSTACK_AUTOMATE_KEY=key
 ```
 
-### File naming convention
-The naming convention of suffixing test files with `.ui` was using to 1) seperate the tests when running mocha 2) meant we could have .js files in the repo without them being ran by the testing library.
+This is optional, and if you choose not to use it just replace the where I've used the variables with your own and remove require("dotenv).config(); anywhere.
+Prerequisites
+Web Driver for Chrome
+node 8 or above run nvm use will use `10.9.0`
 
-`"ui-test": "node node_modules/mocha/bin/mocha ./__tests__/**/*.ui.js --timeout=60000"` (the full path to mocha is used for support for windows)
+To Run
+In the root directory run: 
+npm install
+npm run test
 
-### Page Object Model
-This pattern allows us to contain any methods (e.g login, clickSearch) or locators inside a class which we can share between tests and keep seperate from the testing logic.
-
-## Utilites
-- *wait* to pause the test and wait for any animations or things to load before carring on.
-- **waitFind** uses the until function from selenium-webdriver to wait until it finds the element. You just need to provide it with the current driver (`this.driver` if you're in a class and `driver` if you're in the test) and the element you're looking for.
-- *switchTab* use this util function when you need to run the test on a new tab that's opened
-
-
-- how to set up browser stack
-- where to enter the  credentials (might make this a cong thing)
-
-
-## Getting started
-
-### Prerequisite
-- [Web Drivers](https://www.npmjs.com/package/selenium-webdriver) for each browser you want to install
--
-
-Gotchas
-The flags are mac only, process.env works differently on windows so to get those to work you need to add this script file.
-
-
-- talk about
+Additional Web drivers
+To add additional browsers you'll need to add them to the browsers object in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: npm run test -- --opera
