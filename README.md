@@ -43,9 +43,9 @@ In the root directory run: 
 - `npm run test`
 - `npm run test -- --firefox`*
 
-I've already included firefox web driver config so `-- --firefox` will work out the box but to add any more browsers you'll need to add them to the [browsers object](https://github.com/Jezfx/selenium-user-journey-example/blob/07188cccd4dd80ae719c56ac9c71c341d92666b9/_config.js#L15).
+I've already included firefox web driver config so `-- --firefox` will work out the box but to add any more web drivers you'll need to add them to the [browsers object](https://github.com/Jezfx/selenium-user-journey-example/blob/07188cccd4dd80ae719c56ac9c71c341d92666b9/_config.js#L15), see below.
 
-## Additional Web drivers
+## Adding additional Web drivers
 To add additional browsers you'll need to add them to the [browsers object](https://github.com/Jezfx/selenium-user-journey-example/blob/07188cccd4dd80ae719c56ac9c71c341d92666b9/_config.js#L15) in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: `npm run test -- --opera`
 
 ## Browserstack
