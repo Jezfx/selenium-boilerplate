@@ -51,7 +51,7 @@ To add additional browsers you'll need to add them to the [browsers object](http
 ## Browserstack
 To run automate the tests with browserstack ensure you have an account and have filled in your credentials in the `.env` file. Then just add the Browerstack flag to the npm script to run. That should sent the tests to your Browserstack dashboard and generate the relevant videos and logs.
 
-To send the tests up to Browserstack add the flag to the test script: `npm run test -- --browserstack`
+To run the tests in Browserstack add the flag to the test script: `npm run test -- --browserstack`
 
 <img src="https://imgur.com/download/fLT7zym" />
 
