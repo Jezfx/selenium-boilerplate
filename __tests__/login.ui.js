@@ -33,8 +33,8 @@ describe("Login Page", () => {
         // Demo to test things that open on a new tab
         it("should open the privacy page", async () => {
             await login.openPrivacyPage();
-            const headerText = await utils.waitFind(driver, privacy.locators.h1).getText();
-            expect(headerText).to.equal("Privacy Policy");
+            const headerText = await utils.waitFind(driver, privacy.locators.header).getText();
+            expect(headerText).to.equal("Privacy & Terms");
         });
     })
 
