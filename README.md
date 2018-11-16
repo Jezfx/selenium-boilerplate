@@ -41,12 +41,17 @@ In the root directory run: 
 
 - `npm install`
 - `npm run test`
+- `npm run test -- --firefox`*
+
+I've already included firefox web driver config so `-- --firefox` will work out the box but to add any more browsers you'll need to add them to the [browsers object](https://github.com/Jezfx/selenium-user-journey-example/blob/07188cccd4dd80ae719c56ac9c71c341d92666b9/_config.js#L15).
 
 ## Additional Web drivers
-To add additional browsers you'll need to add them to the browsers object in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: `npm run test -- --opera`
+To add additional browsers you'll need to add them to the [browsers object](https://github.com/Jezfx/selenium-user-journey-example/blob/07188cccd4dd80ae719c56ac9c71c341d92666b9/_config.js#L15) in the config.js file. Simply copy the Chrome configuration and replace it with your new driver. To run the tests using your new driver simply use your new key as the flag when running the npm test script e.g if you've added opera to the object you'd run: `npm run test -- --opera`
 
 ## Browserstack
 To run automate the tests with browserstack ensure you have an account and have filled in your credentials in the `.env` file. Then just add the Browerstack flag to the npm script to run. That should sent the tests to your Browserstack dashboard and generate the relevant videos and logs.
+
+To send the tests up to Browserstack add the flag to the test script: `npm run test -- --browserstack`
 
 <img src="https://imgur.com/download/fLT7zym" />
 
