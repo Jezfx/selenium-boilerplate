@@ -1,5 +1,5 @@
 # Selenium NodeJS boilerplate with Browserstack
-You can find a more detailed documentation and background on [medium](https://medium.com/p/a747d7275996/).
+You can find a more detailed documentation and background on [Medium](https://medium.com/@jezfx/selenium-nodejs-boilerplate-with-browserstack-a747d7275996).
 
 
 This is the end-to-end testing set up I used for my last client which I've stripped back and made into a boilerplate for future use and anyone else who'd benifit from it. 
