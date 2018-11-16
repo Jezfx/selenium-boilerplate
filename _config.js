@@ -18,6 +18,9 @@ const browsers = {
     .withCapabilities(capabilities),
   chrome: new selenium.Builder().withCapabilities(
     selenium.Capabilities.chrome()
+  ),
+  firefox: new selenium.Builder().withCapabilities(
+    selenium.Capabilities.firefox()
   )
 };
 
